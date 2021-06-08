@@ -1,0 +1,24 @@
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+phpunit.xml
+docker-compose.override.yml
+npm-debug.log
+yarn-error.log
+_ide_helper.php
+.phpstorm.meta.php
+_ide_helper_models.php
+yarn.lock
+
+# Lighthouse ( GraphQL )
+_lighthouse_ide_helper.php
+programmatic-types.graphql
+schema-directives.graphql
+
+# cruks
+/storage/app/cruks
