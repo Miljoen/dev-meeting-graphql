@@ -135,6 +135,7 @@ return [
     */
 
     'providers' => [
+        \Nuwave\Lighthouse\Subscriptions\SubscriptionServiceProvider::class,
 
         /*
          * Laravel Framework Service Providers...
