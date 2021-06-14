@@ -4,6 +4,17 @@ scalar Date @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date")
 "A datetime string with format `Y-m-d H:i:s`, e.g. `2018-05-23 13:43:32`."
 scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
 
+type Mutation {
+    updateUser(
+        id: ID!
+        name: String!
+    ): User @broadcast(subscription: "userUpdated")
+}
+
+type Subscription {
+    userUpdated(userId: ID): User!
+}
+
 type Query {
     users: [User!]! @paginate(defaultCount: 10)
     user(id: ID @eq): User @find
