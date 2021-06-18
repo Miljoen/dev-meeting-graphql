@@ -12,11 +12,11 @@ type Mutation {
 }
 
 type Subscription {
-    userUpdated(userId: ID): User!
+    userUpdated: User!
 }
 
 type Query {
-    users: [User!]! @paginate(defaultCount: 10)
+    users: [User!]! @all
     user(id: ID @eq): User @find
 }
 
